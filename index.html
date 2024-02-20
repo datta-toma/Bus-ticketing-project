@@ -169,7 +169,7 @@
                                     <h3>Departure Time</h3>
                                     <p class="font-bold">9:00 PM</p>
                                 </div>
-                                <div class="flex justify-center gap-40 mb-5">
+                                <div class="flex justify-center gap-40 ">
                                     <div class="bg-slate-200 rounded-lg p-2">
                                         <h3>Boarding Point - Laxmipur</h3>
                                     </div>
@@ -192,11 +192,93 @@
             </div>
            </section>
 
-           <section></section>
+           <section class="container mx-auto">
+            <div class="flex justify-evenly mt-20">
+                <div>
+                    <h3 class="font-bold text-xl">Select Your Seat</h3>
+                <hr>
+                <div class="flex gap-64">
+                    <div class="flex gap-3">
+                        <img src="./images/seat-gray.png">
+                        <p>Available</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <img src="./images/seat-green-filled.png">
+                        <p class="text-green-500">Selected</p>
+                    </div>
+                </div>
+                <hr>
+                <div CLASS="flex justify-end mt-4">
+                    <button class="btn"><img src="./images/tabler-icon-steering-wheel.svg"></button>
+                </div>
+                <div id="seat-contain">
+                    <div class="flex justify-between mt-5">
+                        <div class="flex gap-5 ">
+                            <button class="btn btn-1", value="A1">A1</button>
+                            <button class="btn btn-1", value="A2">A2</button>
+                        </div>
+                        <div class="flex gap-5">
+                            <button class="btn btn-1", value="A3">A3</button>
+                            <button class="btn btn-1", value="A4">A4</button>
+                        </div>
+                    </div>
+        
+                    <div class="flex justify-between mt-5">
+                        <div class="flex gap-5">
+                            <button class="btn btn-1", value="B1">B1</button>
+                            <button class="btn btn-1", value="B2">B2</button>
+                        </div>
+                        <div class="flex gap-5">
+                            <button class="btn btn-1", value="B3">B3</button>
+                            <button class="btn btn-1", value="B4">B4</button>
+                            
+                        </div>
+                    </div>
+        
+
+                    
+                    
+                </div>
+                
+                </div>
+    
+                <div>
+                    <h3 class="font-bold text-xl">Select Your Seat</h3>
+                    <hr>
+                    <div class="flex gap-16 font-bold">
+                        <div class="flex">
+                            <li class="list-none">Seat</li>
+                            <li id="seat-count"class="list-none">0</li>
+                        </div>
+                        <li class="list-none">Class</li>
+                        <li class="list-none">Price</li>
+                        
+                    </div>
+                    <div id="seat-container">
+                         
+                       </div>
+                    <hr>
+                    <hr>
+                    <div class="flex gap-28">
+                        <div>
+                            <h3>Total Price</h3>
+                        </div>
+                        <div>
+                            <h3>BDT </h3>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+           
+            
+           </section>
     </main>
 
     <footer></footer>
 
-    <script src="./js/changepage.js"></script>
+    
+    <!-- <script src="./js/functioncall.js"></script> -->
+    <script src="./js/text.js"></script>
 </body>
 </html>

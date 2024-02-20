@@ -4,3 +4,9 @@
 .font-raleway{
     font-family: "Raleway", sans-serif;
 }
+
+#selected-seat-container{
+    display: flex;
+    gap: 10;
+    list-style: none;
+}
