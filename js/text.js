@@ -45,7 +45,7 @@ for(const btn of allBtn){
     const tag3Text = tag3.innerText;
     const tag3Value = parseInt(tag3Text);
     totalCost.innerText = convertedTotalCost + tag3Value;
-  
+    btn.disabled = true;
 
     });
 }
