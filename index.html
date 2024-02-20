@@ -144,6 +144,7 @@
                 <div class="flex justify-center gap-14 mt-16 bg-slate-50 shadow-xl">
                     <div>
                         <div class="flex justify-evenly">
+                            <!-- greenline -->
                             <div class=" flex gap-5">
                                 <div>
                                     <img src="./images/bus-logo.png" alt="">
@@ -153,9 +154,10 @@
                                     <p>Coach-009-WEB ! AC_Business</p>
                                 </div>
                             </div>
+                            <!-- seats left -->
                             <div class="flex gap-3 bg-[#c6f0d5] shadow-xl rounded-xl">
                                 <img src="./images/seat-green.png" alt="">
-                                <p class="text-green-600">40 Seats left</p>
+                                <p id="sit-count" class="text-green-600 p-2">8<br> Seats left</p>
                             </div>
                         </div>
     
@@ -183,6 +185,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- per seat -->
                     <div>
                         <img src="./images/fare.png">
                         <h3 class="font-bold text-2xl">550 Taka</h3>
@@ -194,6 +197,7 @@
 
            <section class="container mx-auto">
             <div class="flex justify-evenly mt-20">
+                <!-- select your seat -->
                 <div>
                     <h3 class="font-bold text-xl">Select Your Seat</h3>
                 <hr>
@@ -241,13 +245,13 @@
                 </div>
                 
                 </div>
-    
+                <!-- select seat list -->
                 <div>
                     <h3 class="font-bold text-xl">Select Your Seat</h3>
                     <hr>
                     <div class="flex gap-16 font-bold">
                         <div class="flex">
-                            <li class="list-none">Seat</li>
+                            <span class="list-none">Seat</span>
                             <li id="seat-count"class="list-none">0</li>
                         </div>
                         <li class="list-none">Class</li>
@@ -264,7 +268,7 @@
                             <h3>Total Price</h3>
                         </div>
                         <div>
-                            <h3>BDT </h3>
+                            <h3>BDT:<span id="total-cost">0</span> </h3>
                         </div>
                     </div>
                     
