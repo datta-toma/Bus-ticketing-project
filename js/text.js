@@ -81,11 +81,12 @@ for(const btn of allBtn){
         }
     });
 
+    // input and apply hidden
     document.getElementById("apply-btn").addEventListener("click", function() {
         document.getElementById("input-field").style.display = "none";
         document.getElementById("apply-btn").style.display = "none";
     });
-    
+    // btn disabled
     function disableAllButtons() {
         for (const btn of allBtn) {
             btn.disabled = true;
