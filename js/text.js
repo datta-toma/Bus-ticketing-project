@@ -81,6 +81,10 @@ for(const btn of allBtn){
         }
     });
 
+    document.getElementById("apply-btn").addEventListener("click", function() {
+        document.getElementById("input-field").style.display = "none";
+        document.getElementById("apply-btn").style.display = "none";
+    });
     
     function disableAllButtons() {
         for (const btn of allBtn) {
