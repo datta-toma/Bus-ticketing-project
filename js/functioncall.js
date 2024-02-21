@@ -1,15 +1,18 @@
 
 const allBtn = document.getElementsByClassName("btn-1");
 let count=0;
+let convertedTotalCost=0;
 for(const btn of allBtn){
     btn.addEventListener("click", function(e){
         btn.classList.add('bg-green-400');
        count = count+1;
-       if(count > 4){
-        disableButtons();
+       if(count>= 4){
+        disableAllButtons();
        }
+       btn.disabled = true;
        setInnerText("seat-count",count);
-       
+
+      
     //    seat left
        const seatElement = document.getElementById("sit-count");
        const seatText = seatElement.innerText;
@@ -42,33 +45,31 @@ for(const btn of allBtn){
     const tag3Text = tag3.innerText;
     const tag3Value = parseInt(tag3Text);
     totalCost.innerText = convertedTotalCost + tag3Value;
+    
 
-    
-    
     });
 }
 
-function setInnerText(id, value) {
-    document.getElementById(id).innerText= value;
-}
 
-
-const gand = document.getElementById("apply-btn");
+    const gand = document.getElementById("apply-btn");
     gand.addEventListener("click", function(){
 
         // get the value input
+        const totalCost = document.getElementById("total-cost");
+        const totalCostText = totalCost.innerText;
+         const convertedTotalCost = parseInt(totalCostText);
         const couponElement = document.getElementById("input-field").value;
         const couponCode = couponElement.split(" ").join("").toUpperCase();
         if(convertedTotalCost >= 2000){
-            if(couponCode === "NEW15" || couponCode === "Couple20"){
+            if(couponCode === "NEW15" || couponCode === "Couple 20"){
                 // discount calculation
                 const discountElement = document.getElementById("discount");
                 const discountAmount = convertedTotalCost*0.15;
-                discountElement.innerText = discountAmount.toFixed(2);
+                discountElement.innerText = discountAmount;
 
                 // total calculation
                 const restTotal = document.getElementById("total");
-                restTotal.innerText = convertedTotalCost - discountAmount.toFixed(2);
+                restTotal.innerText = convertedTotalCost - discountAmount;
                 document.getElementById("input-field").value="";
             }else{
                 alert("Invalid Coupone code");
@@ -80,3 +81,13 @@ const gand = document.getElementById("apply-btn");
             document.getElementById("input-field").value="";
         }
     });
+
+    function disableAllButtons() {
+        for (const btn of allBtn) {
+            btn.disabled = true;
+        }
+    }
+
+function setInnerText(id, value) {
+    document.getElementById(id).innerText= value;
+}
